@@ -22,14 +22,13 @@ neu = np.zeros((rows,cols))
 az_elev_dis = np.zeros((rows,4))
 
 tablica_ze_wsp = np.zeros((rows,8))
-tablica_ze_wsp2 = np.zeros((rows,7))
 
 for i in range(rows):
     blh[i] = el_grs84.xyz2blh(tablica[i,0], tablica[i,1], tablica[i,2])
     xy2000[i] = el_grs84.u2000(blh[i,0], blh[i,1], 0.999923, 21)
     xy92[i] = el_grs84.u92(blh[i,0], blh[i,1], 0.9993)
     
-   # neu[i] = el_grs84.neu(tablica[i,0], tablica[i,1], tablica[i,2], tablica[i,0]+1, tablica[i,1]+1)
+    #neu[i] = el_grs84.neu(tablica[i,0], tablica[i,1], tablica[i,2], tablica[i,0]+1, tablica[i,1]+1)
     tablica_ze_wsp[i,0:3] = blh[i]
     tablica_ze_wsp[i,3:6] = xy2000[i]
     tablica_ze_wsp[i,6:8] = xy92[i]
