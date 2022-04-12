@@ -17,6 +17,9 @@ class Transformacje:
         elif model == "grs80":
             self.a = 6378137.0
             self.b = 6356752.31414036
+        elif model == "mars":
+            self.a = 3396900.0
+            self.b = 3376097.80585952
         else:
             raise NotImplementedError(f"{model} model not implemented")
         self.flattening = (self.a - self.b) / self.a
