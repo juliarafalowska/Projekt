@@ -120,33 +120,7 @@ class Transformacje:
         return x92, y92 
     
     def azym_elew(self, X0, Y0, Z0, X, Y, Z):
-        '''
-        Funkcja oblicza kąt azymutu i kąt elewacji na podstawie współrzędnych w 
-        układzie ortokartezjańskim.
-
-        Parameters
-        ----------
-        X0 : FLOAT
-            - wartosc X punktu początkowego w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-        Y0 : FLOAT
-            - wartosc Y punktu początkowego w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-        Z0 : FLOAT
-            - wartosc Z punktu początkowego w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-        X : FLOAT
-            - wartosc X w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-        Y : FLOAT
-            - wartosc Y w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-        Z : FLOAT
-            - wartosc Z w układzie ortokartezjańskim, liczba zmiennoprzecinkowa [m]
-
-        Returns
-        -------
-        azymut : FLOAT
-            - wartosć kąta azymutu, liczba zmiennoprzecinkowa [stopnie]
-        elewacja : FLOAT
-            - wartosć kąta elewacji, liczba zmiennoprzecinkowa [stopnie]
-
-        '''
+    
  
         N,E,U = self.neu(X0, Y0, Z0, X, Y, Z)
         
